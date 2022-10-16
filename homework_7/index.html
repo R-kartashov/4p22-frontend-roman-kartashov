@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,700" rel="stylesheet">
+    <title>form</title>
+</head>
+<body>
+    <div class="card">
+        <div class="form__tittle"><h1>Вход</h1></div>
+        <form class="form-authentication" action="#">
+            <div class="form__form-email form_float">
+                <input class="input-text input__email" type="email" id="email" name="email" placeholder="Email" autocomplete="off">
+                <label class="form__label" for="email">Email</label>
+            </div>
+            <div class="form__form-password form_float">
+                <input class="input-text input__password" type="password" id="password" name="password" placeholder="password" autocomplete="off">
+                <label class="form__label" for="password">Password</label>
+            </div>
+            <div class="form__form-checkbox">
+                <input class="checkbox" type="checkbox" id="checkbox-memory" name="check" value="TRUE">
+                <label class="form__label-check" for="checkbox-memory">Я согласен получать обновления на почту</label>
+            </div>
+            <button class="form__button">Войти</button>
+        </form>
+    </div>
+</body>
+</html>

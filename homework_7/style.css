@@ -1,0 +1,235 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1B2473;
+  font-family: "Roboto";
+}
+
+.card {
+  position: relative;
+  margin: 5.6944444444vw auto;
+  width: 41.6666666667vw;
+  height: 28.6111111111vw;
+  background: #ffffff;
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 1.81vw 3.13vw;
+}
+
+.form {
+  position: relative;
+}
+.form_float {
+  position: relative;
+  max-width: 35.3472222222vw;
+}
+.form__tittle h1 {
+  position: absolute;
+  top: 1.1805555556vw;
+  left: 16.9444444444vw;
+  font-size: 3.4722222222vw;
+  font-weight: 700;
+  color: rgb(120, 120, 120);
+}
+.form__label {
+  position: absolute;
+  color: rgb(204, 204, 204);
+  font-family: "Roboto";
+  font-size: 1.9444444444vw;
+  font-weight: 700;
+  top: 0.4861111111vw;
+  left: 15px;
+  height: 100%;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+.form__form-email {
+  margin-top: 1.6666666667vw;
+  margin-bottom: 2.2222222222vw;
+}
+.form__form-password {
+  margin-bottom: 1.1111111111vw;
+}
+.form__form-checkbox {
+  font-family: "Roboto";
+  font-size: 0.9722222222vw;
+  font-weight: 400;
+  color: rgb(120, 120, 120);
+}
+.form__button {
+  width: 12.5vw;
+  position: absolute;
+  top: 17.0138888889vw;
+  left: 11.4583333333vw;
+  height: 3.68vw;
+  margin: 0 auto;
+  background: #1A226B;
+  border: none;
+  color: #ffffff;
+  border-radius: 10px;
+  font-family: "Roboto";
+  font-size: 1.6666666667vw;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.input-text {
+  width: 35.3472222222vw;
+  height: 3.4027777778vw;
+  border: 2px solid #787878;
+  border-radius: 10px;
+  font-size: 1.9444444444vw;
+  font-weight: 700;
+  color: rgb(120, 120, 120);
+  padding-left: 15px;
+}
+
+.input-text:focus {
+  outline: 0;
+  box-shadow: 0 0 11px 0.0001rem rgba(120, 120, 120, 0.368627451);
+  padding-left: 15px;
+}
+
+.input-text::placeholder {
+  color: transparent;
+}
+
+.input-text:focus ~ .form__label,
+.input-text:not(:placeholder-shown) ~ .form__label {
+  transform: translateY(-2.2vw) translateX(-0.5rem);
+  color: rgb(120, 120, 120);
+  font-family: "Roboto";
+  font-size: 1.1111111111vw;
+  font-weight: 700;
+}
+
+.form-authentication {
+  position: absolute;
+  top: 5.9027777778vw;
+  display: flex;
+  flex-direction: column;
+  max-width: 36vw;
+  height: 21.4583333333vw;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox + .form__label-check {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.checkbox + .form__label-check::before {
+  content: "";
+  width: 1.6666666667vw;
+  height: 1.6666666667vw;
+  border: 2px solid #787878;
+  border-radius: 0.4861111111vw;
+  margin-right: 0.6944444444vw;
+}
+
+.checkbox:checked + .form__label-check::before {
+  background-color: #efebeb;
+  background-image: url(./img/chek.svg);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    position: relative;
+    margin: 2.6041666667vw;
+    width: 94.7916666667vw;
+    height: 90.7552083333vw;
+    background: #ffffff;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 4.95vw 5.86vw 30.1vw;
+  }
+  .form {
+    position: relative;
+  }
+  .form_float {
+    max-width: 83.0729166667vw;
+  }
+  .form__tittle {
+    position: absolute;
+    height: 6.5104166667vw;
+    top: 2.34375vw;
+    left: 20.9635416667vw;
+  }
+  .form__tittle h1 {
+    font-family: "Roboto";
+    text-align: center;
+    font-size: 7.8125vw;
+    font-weight: 700;
+    color: rgb(120, 120, 120);
+  }
+  .form__label {
+    font-size: 3.6458333333vw;
+    top: 0.9114583333vw;
+    left: 15px;
+    height: 100%;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+  }
+  .form__form-email {
+    margin-top: 4.8177083333vw;
+    margin-bottom: 4.8177083333vw;
+  }
+  .form__form-password {
+    margin-bottom: 2.4739583333vw;
+  }
+  .form__form-checkbox {
+    font-size: 2.34375vw;
+    margin-bottom: 8.3333333333vw;
+  }
+  .form__button {
+    position: absolute;
+    top: 37.5vw;
+    left: 27.0833333333vw;
+    width: 28.6458333333vw;
+    height: 10.4166666667vw;
+    font-size: 4.1666666667vw;
+  }
+  .form-authentication {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-width: 83.0729166667vw;
+    height: 48vw;
+    top: 11.4583333333vw;
+    left: 6.5104166667vw;
+  }
+  .input-text {
+    width: 83.0729166667vw;
+    height: 6.3802083333vw;
+    font-size: 3.6458333333vw;
+  }
+  .input-text:focus ~ .form__label,
+.input-text:not(:placeholder-shown) ~ .form__label {
+    transform: translateY(-5vw) translateX(-0.5rem);
+    font-size: 3.125vw;
+  }
+  .checkbox + .form__label-check::before {
+    content: "";
+    width: 4.1666666667vw;
+    height: 4.1666666667vw;
+    border: 2px solid #787878;
+    border-radius: 7px;
+    margin-right: 1.1111111111vw;
+  }
+}
