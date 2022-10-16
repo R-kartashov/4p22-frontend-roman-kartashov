@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+body {
+    background: #1B2473;
+    font-family: 'Roboto';
+}
+.card {
+    position: relative;
+    margin: calc(82 / 1440 * 100vw) auto;
+    width: calc(600 / 1440 * 100vw);
+    height: calc(412 / 1440 * 100vw);
+    background: #ffffff;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 1.81vw 3.13vw;
+}
+.form {
+    position: relative;
+
+    &_float {
+        position: relative;
+        max-width: calc(509 / 1440 * 100vw);
+    }
+
+    &__tittle h1{
+        position: absolute;
+        top: calc(17 / 1440 * 100vw);
+        left: calc(244 / 1440 * 100vw);
+        font-size: calc(50 / 1440 * 100vw);
+        font-weight: 700;
+        color: rgba(120, 120, 120, 1);
+    }
+
+    &__label {
+        position: absolute;
+        color: rgba(204, 204, 204, 1);
+        font-family: 'Roboto';
+        font-size: calc(28 / 1440 * 100vw);
+        font-weight: 700;
+        top: calc(7 / 1440 * 100vw);
+        left: 15px;
+        height: 100%;
+        pointer-events: none;
+        border: 1px solid transparent;
+        transform-origin: 0 0;
+        transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+    }
+
+    &__form-email {
+        margin-top: calc(24 / 1440 * 100vw);
+        margin-bottom: calc(32 / 1440 * 100vw);
+    }
+
+    &__form-password {
+        margin-bottom: calc(16 / 1440 * 100vw);
+    }
+
+    &__form-checkbox {
+        font-family: 'Roboto';
+        font-size: calc(14 / 1440 * 100vw);
+        font-weight: 400;
+        color: rgba(120, 120, 120, 1);
+        // margin-bottom: 3.2vw;
+    }
+
+    &__button {
+        width: calc(180 / 1440 * 100vw);
+        position: absolute;
+        top: calc(245 / 1440 * 100vw);
+        left: calc(165 / 1440 * 100vw);
+        height: 3.68vw;
+        margin: 0 auto;
+        background: #1A226B;
+        border: none;
+        color: #ffffff;
+        border-radius: 10px;
+        font-family: 'Roboto';
+        font-size: calc(24 / 1440 * 100vw);
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.input-text {
+    width: calc(509 / 1440 * 100vw);
+    height: calc(49 / 1440 * 100vw);
+    border: 2px solid #787878;
+    border-radius: 10px;
+    font-size:calc(28 / 1440 * 100vw);
+    font-weight: 700;
+    color: rgba(120, 120, 120, 1);
+    padding-left: 15px;
+}
+
+.input-text:focus {
+    outline: 0;
+    box-shadow: 0 0 11px 0.0001rem #7878785e;
+    padding-left: 15px;
+}
+
+.input-text::placeholder {
+    color: transparent;
+}
+
+.input-text:focus~.form__label,
+.input-text:not(:placeholder-shown)~.form__label {
+    transform: translateY(-2.2vw) translateX(-0.5rem);
+    color: rgba(120, 120, 120, 1);
+    font-family: 'Roboto';
+    font-size: calc(16 / 1440 * 100vw);
+    font-weight: 700;
+}
+
+
+.form-authentication {
+    position: absolute;
+    top: calc(85 / 1440 * 100vw);
+    display: flex;
+    flex-direction: column;
+    max-width: 36vw;
+    height: calc(309 / 1440 * 100vw);
+}
+
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox + .form__label-check {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.checkbox + .form__label-check::before {
+    content: '';
+    width: calc(24 / 1440 * 100vw);
+    height: calc(24 / 1440 * 100vw);
+    border: 2px solid #787878;
+    border-radius: calc(7 / 1440 * 100vw);
+    margin-right: calc(10 / 1440 * 100vw);
+}
+
+.checkbox:checked+.form__label-check::before {
+    background-color: #efebeb;
+    background-image: url(./img/chek.svg);
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        position: relative;
+        margin: calc(20 / 768 * 100vw);
+        width: calc(728 / 768 * 100vw);
+        height: calc(697 / 768 * 100vw);
+        background: #ffffff;
+        box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        padding: 4.95vw 5.86vw 30.1vw;
+    }
+
+    .form {
+        position: relative;
+
+        &_float {
+            max-width: calc(638 / 768 * 100vw);
+        }
+
+        &__tittle {
+            position: absolute;
+            height: calc(50 / 768 * 100vw);
+            top: calc(18 / 768 * 100vw);
+            left: calc(161 / 768 * 100vw);
+        }
+
+        &__tittle h1{
+            font-family: 'Roboto';
+            text-align: center;
+            font-size: calc(60 / 768 * 100vw);
+            font-weight: 700;
+            color: rgba(120, 120, 120, 1);
+        }
+
+        &__label {
+            font-size: calc(28 / 768 * 100vw);
+            top: calc(7 / 768 * 100vw);
+            left: 15px;
+            height: 100%;
+            pointer-events: none;
+            border: 1px solid transparent;
+            transform-origin: 0 0;
+            transition: opacity .35s ease-in-out, transform .35s ease-in-out;
+        }
+    
+        &__form-email {
+            margin-top: calc(37 / 768 * 100vw);
+            margin-bottom: calc(37 / 768 * 100vw);
+        }
+    
+        &__form-password {
+            margin-bottom: calc(19 / 768 * 100vw);
+        }
+    
+        &__form-checkbox {
+            font-size: calc(18 / 768 * 100vw);
+            margin-bottom: calc(64 / 768 * 100vw);
+        }
+    
+        &__button {
+            position: absolute;
+            top: calc(288 / 768 * 100vw);
+            left: calc(208/ 768 * 100vw);
+            width: calc(220 / 768 * 100vw);
+            height: calc(80 / 768 * 100vw);
+            font-size: calc(32 / 768 * 100vw);
+        }
+    }
+
+    .form-authentication {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        max-width: calc(638 / 768 * 100vw);
+        height: 48vw;
+        top: calc(88 / 768 * 100vw);
+        left: calc(50 / 768 * 100vw);
+    }
+
+    .input-text {
+        width: calc(638 / 768 * 100vw);
+        height: calc(49 / 768 * 100vw);
+        font-size: calc(28 / 768 * 100vw);
+    }
+
+    .input-text:focus~.form__label,
+    .input-text:not(:placeholder-shown)~.form__label {
+        transform: translateY(-5vw) translateX(-0.5rem);
+        font-size: calc(24 / 768 * 100vw);
+    }
+
+    .checkbox + .form__label-check::before {
+        content: '';
+        width: calc(32 / 768 * 100vw);
+        height: calc(32 / 768 * 100vw);
+        border: 2px solid #787878;
+        border-radius: 7px;
+        margin-right: calc(16 / 1440 * 100vw);
+    }
+}
